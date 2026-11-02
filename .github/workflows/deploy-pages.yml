@@ -25,8 +25,6 @@ jobs:
       - name: Install dependencies
         run: bun install --frozen-lockfile
       - name: Build static pages
-        env:
-          NITRO_PRESET: github_pages
         run: bunx vite build --config vite.pages.config.ts
       - name: Upload static output
         uses: actions/upload-pages-artifact@v3
